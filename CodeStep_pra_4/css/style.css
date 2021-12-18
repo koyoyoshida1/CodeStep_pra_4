@@ -1,0 +1,103 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+img {
+  max-width: 100%;
+}
+
+#pra4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 100px auto;
+}
+
+#pra4 .txt {
+  width: 35%;
+  position: relative;
+}
+
+#pra4 .txt::before {
+  content: "";
+  width: 163px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  right: -81px;
+  -webkit-transform: skew(-18deg);
+          transform: skew(-18deg);
+}
+
+#pra4 .txt_item {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+}
+
+#pra4 .txt_item h2 {
+  line-height: 1;
+  margin-bottom: 56px;
+}
+
+#pra4 .txt_item_ttl {
+  display: block;
+  font-size: 4.375rem;
+  margin-bottom: 12px;
+}
+
+#pra4 .txt_item_sub {
+  display: block;
+  font-size: 0.875rem;
+}
+
+#pra4 .txt_item p {
+  font-size: 0.875rem;
+}
+
+#pra4 .img {
+  width: 65%;
+}
+
+#pra4 .img img {
+  width: 100%;
+  height: 500px;
+  vertical-align: bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  #pra4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #pra4 .txt {
+    margin-bottom: 20px;
+    padding: 0 16px;
+    width: 100%;
+  }
+  #pra4 .txt::before {
+    content: none;
+  }
+  #pra4 .txt_item {
+    position: static;
+  }
+  #pra4 .txt_item_ttl {
+    font-size: 2.25rem;
+  }
+  #pra4 .txt_item .pc {
+    display: none;
+  }
+  #pra4 .img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+img {
+  max-width: 100%;
+}
+
+#pra4 {
+  display: flex;
+  width: 100%;
+  margin: 100px auto;
+
+  .txt {
+    width: 35%;
+    position: relative;
+
+    &::before {
+      // 疑似要素（before）で白いボックスを作り画像の上にa重ねる
+      // 「transform: skewX(-18deg);」で角度をつけて平行四辺形に
+      // positionとrightで画像の上に重ねる
+      content: "";
+      width: 163px;
+      height: 100%;
+      background: #fff;
+      position: absolute;
+      right: -81px;
+      transform: skew(-18deg);
+    }
+
+    &_item {
+      position: absolute;
+      top: 60px;
+      left: 60px;
+
+      h2 {
+        line-height: 1;
+        margin-bottom: 56px;
+      }
+      
+      &_ttl {
+        display: block;
+        font-size: 4.375rem;
+        margin-bottom: 12px;
+      }
+      
+      &_sub {
+        display: block;
+        font-size: 0.875rem;
+      }
+      
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .img {
+    width: 65%;
+
+    img {
+      width: 100%;
+      height: 500px;
+      vertical-align: bottom;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  #pra4 {
+    flex-direction: column;
+
+    .txt {
+      margin-bottom: 20px;
+      padding: 0 16px;
+      width: 100%;
+      
+      &::before {
+        content: none;
+      }
+      &_item {
+        position: static;
+
+        &_ttl {
+          font-size: 2.25rem;
+        }
+
+        .pc {
+          display: none;
+        }
+      }
+    }
+
+    .img {
+      width: 100%;
+    }
+  }
+}
